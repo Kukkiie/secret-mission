@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Secret Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HBD Song & Heaven Sound & Man U Song -->
+  <audio id="bgMusic" src="./assets/Indian sing happy birthday.mp4" playsinline></audio>
+  <audio id="heavenSound" src="./assets/HipHopSong.mp3" preload="auto"></audio>
+  <audio id="manuSong" src="./assets/Glory Glory Man United karaoke.mp4" preload="auto"></audio>
+
+  <main id="page">
+
+    <!-- ===================== PAGE 1: SECURITY GATE ===================== -->
+    <section class="screen active" id="screen-gate" aria-hidden="false">
+      <div class="card gate-card">
+
+        <div class="top-bar">
+          <span class="tag">matchday access</span>
+          <span class="badge"><span class="badge-dot"></span>old trafford gate</span>
+        </div>
+
+        <div class="img-box">
+          <img
+            src="./assets/club-security-guard.png"
+            alt="security guard"
+            class="guard-img"
+          />
+        </div>
+
+        <h1 class="gate-welcome">🔴 Welcome Jeemmy 🔴</h1>
+        <p class="gate-sub">
+          this is your secret web... put your code in.
+        </p>
+
+        <div class="gate-form">
+          <input id="codeInput" type="password" inputmode="numeric" placeholder="enter your code">
+          <button id="enterBtn" class="primary-btn gate-btn">Enter Stadium</button>
+          <p id="gateMsg" class="gate-msg"></p>
+          <p class="gate-hint">hint: your birthday</p>
+        </div>
+
+        <p class="footer-info">powered by Kukkie United</p>
+      </div>
+    </section>
+
+    <!-- ===================== PAGE 2: HBD CAKE ===================== -->
+    <section class="screen" id="screen-hbd" aria-hidden="true">
+        <section class="hero">
+            <h1 class="title hero-title">HAPPY BIRTHDAY</h1>
+
+            <!-- ====== CAKE ====== -->
+            <div class="cake-wrap">
+                <div class="cake">
+
+                    <!-- candle -->
+                    <div class="candle-area" id="realCandleArea">
+                    <div class="candle" id="realCandle">
+                        <div class="wick"></div>
+                        <div class="flame" id="realFlame"></div>
+                        <div class="glow" id="realGlow"></div>
+                    </div>
+                    </div>
+
+                    <!-- cake body -->
+                    <div class="layer layer-bottom"></div>
+
+                    <!-- man u logo -->
+                    <img src="./assets/man-u-logo.png" class="cake-logo" alt="man u logo"/>
+                </div>
+            </div>
+
+            <p class="click-hint">blow or tap the cake to put out the candle</p>
+
+            <!-- ====== WISH BOX ====== -->
+            <div class="wish-box">
+            <label for="wishInput" class="wish-label">MAKE A WISH ✨</label>
+            <textarea id="wishInput" placeholder="type your wish here..."></textarea>
+            <button id="sendWishBtn" class="primary-btn" disabled>Send Wish</button>
+            </div>
+        </section>
+    </section>
+
+  <!-- ====== JESUS POPUP ====== -->
+  <div class="popup" id="popupJesus1" aria-hidden="true">
+    <div class="popup-card">
+      <img src="./assets/jesus-badboy.gif" class="meme" alt="jesus meme"/>
+      <p class="popup-text"><i>“I got your wish, bro!”</i></br> - Jesus -</p>
+
+      <button id="micBtn" class="primary-btn">Blow Candle</button>
+      <p id="micStatus" class="mic-status"></p>
+    </div>
+  </div>
+
+  <!-- ====== FINISH POPUP ====== -->
+  <div class="popup" id="popupFinish" aria-hidden="true" style="display:none;">
+    <div class="popup-card finish-card">
+        <div class="finish-img-wrap">
+            <img src="./assets/ManU-Flag.jpeg" class="finish-main" alt="finish layout">
+            <img src="./assets/JM-overlay.png" class="finish-overlay" alt="overlay"/>
+        </div>
+
+        <p class="popup-text big">MISSION COMPLETE!</p>
+        <p class="popup-sub">may your wish come true ✨</p>
+        <button id="replayBtn" class="primary-btn">Replay</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
